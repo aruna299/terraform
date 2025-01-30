@@ -7,6 +7,11 @@
 - Terraform can manage low-level components like compute, storage, and networking resources, as well as high-level components like DNS entries and SaaS features.
 - Terraform creates and manages resources on cloud platforms and other services through their application programming interfaces (APIs).
 - Providers enable Terraform to work with virtually any platform or service with an accessible API.
+
+## Terraform features:
+- Terraform supports parallel execution - Terraform does not wait for one resource to finish before starting the next unless there’s a dependency. This means subnets can be created at the same time as long as they don’t depend on each other, speeding up the overall provisioning.
+- Automatic dependency management - You do not need to specify in detail the sequence of actions or worry about the interdependencies; Terraform figures that out for you.
+- State Management: Terraform keeps track of the current state of the infrastructure and ensures that any changes to the configuration are only applied when necessary. For example, if a resource was already created, Terraform will not recreate it unnecessarily.
   
 ### The core Terraform workflow consists of three stages:
 
@@ -15,3 +20,10 @@
 -->Plan: Terraform creates an execution plan describing the infrastructure it will create, update, or destroy based on the existing infrastructure and your configuration.
 
 -->Apply: On approval, Terraform performs the proposed operations in the correct order, respecting any resource dependencies. For example, if you update the properties of a VPC and change the number of virtual machines in that VPC, Terraform will recreate the VPC before scaling the virtual machines.
+
+## State File - Tracking the infrastructure
+Terraform generates a plan and prompts you for your approval before modifying your infrastructure. It also keeps track of your real infrastructure in a state file, which acts as a source of truth for your environment. Terraform uses the state file to determine the changes to make to your infrastructure so that it will match your configuration.
+
+- Terraform configuration files are declarative, meaning that they describe the end state of your infrastructure.
+- You do not need to write step-by-step instructions to create resources because Terraform handles the underlying logic.
+- Terraform builds a resource graph to determine resource dependencies and creates or modifies non-dependent resources in parallel. This allows Terraform to provision resources efficiently.
