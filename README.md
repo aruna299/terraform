@@ -33,3 +33,6 @@ Terraform generates a plan and prompts you for your approval before modifying yo
 -->Terraform supports reusable configuration components called modules that define configurable collections of infrastructure, saving time and encouraging best practices.
 
 -->Since your configuration is written in a file, you can commit it to a Version Control System (VCS) and use HCP Terraform to efficiently manage Terraform workflows across teams. HCP Terraform runs Terraform in a consistent, reliable environment and provides secure access to shared state and secret data, role-based access controls, a private registry for sharing both modules and providers, and more.
+
+### Variables
+- Terraform input variables are used to pass certain values from utside of the configuration.
