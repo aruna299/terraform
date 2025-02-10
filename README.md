@@ -38,7 +38,7 @@ Terraform generates a plan and prompts you for your approval before modifying yo
 - Terraform input variables are used to pass certain values from utside of the configuration.
 - Hashicorp recommends creating a seperate file with the name of *.tfvars to define all variables in a project.
 
-Structure of defining variables in a project:
+#### Structure of defining variables in a project:
    1. main configuration file
    2. variables.tf where we define all the variables
    3. terraform.tfvars where we defines the values of all the variables
