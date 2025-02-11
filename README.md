@@ -42,5 +42,20 @@ Terraform generates a plan and prompts you for your approval before modifying yo
    1. main configuration file
    2. variables.tf where we define all the variables
    3. terraform.tfvars where we defines the values of all the variables
-
-
+#### Terraform variable declaration:
+1. When variables are declared in configuration, we can set the values in below ways
+   - Variable defaults
+     example:
+     variable "instance_type"{
+     default="t2.micro"
+     }
+  - Variable defination file(*.tfvars)
+  - Environment variables
+  - setting variables in command line
+    example:
+    variable "instance_type"{
+     }
+    * when we hit terraform plan terraform will request to enter the instant type in the command line
+    * another way when we hit terraform plan -var="instance-type=t2.micro"
+    
+    
