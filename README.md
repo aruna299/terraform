@@ -56,6 +56,6 @@ Terraform generates a plan and prompts you for your approval before modifying yo
     variable "instance_type"{
      }
     * when we hit terraform plan terraform will request to enter the instant type in the command line
-    * another way when we hit terraform plan -var="instance-type=t2.micro"
+    * another way is  we can directly hit with the value in the command line using terraform plan -var="instance-type=t2.micro"
     
     
