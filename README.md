@@ -57,5 +57,13 @@ Terraform generates a plan and prompts you for your approval before modifying yo
      }
     * when we hit terraform plan terraform will request to enter the instant type in the command line
     * another way is  we can directly hit with the value in the command line using terraform plan -var="instance-type=t2.micro"
+   
+#### variable definition precedence:
+- Terraform loads variables in the following order, withe later sources taking precedence over earlier once
+   Environment variables
+   terraform.tfvars file if present
+   terraform.tfvars.json file if present
+   Any *.auto.tfvars or *.auto.tfvars.json preceded in lexical order (alphbetical order) of their filenames
+   Any -var and -var-file options on the command line
     
     
