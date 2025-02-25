@@ -66,4 +66,6 @@ Terraform generates a plan and prompts you for your approval before modifying yo
    Any *.auto.tfvars or *.auto.tfvars.json preceded in lexical order (alphbetical order) of their filenames
    Any -var and -var-file options on the command line
     
-    
+## Data types
+- refers to type of value
+- depending upon the requirement we have wide variety of values in terraform configuration
